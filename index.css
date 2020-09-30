@@ -1,5 +1,5 @@
 body {
-  background-color: #332d2c85;
+  background-color: #065757ec;
 }
 
 .container {
@@ -7,7 +7,6 @@ body {
   text-align: center;
   width: 50%;
   margin: auto;
-  margin-top: 12.5em;
   padding: 0.5em 0.8em;
   box-shadow: 0 4px 8px 0 #fffefe2f;
 }
@@ -17,7 +16,16 @@ body {
   padding: 0.8em;
 }
 
-.fact-output {
+#date-input {
+  padding: 0.4em 1em;
+  margin-bottom: 1em;
+}
+
+.date-fact {
+  margin-top: 5em;
+}
+
+.output {
   margin-bottom: 1em;
 }
 
