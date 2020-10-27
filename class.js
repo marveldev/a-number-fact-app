@@ -1,27 +1,27 @@
 class FactBook {
   numberFact() {
-    const input = document.querySelector('.number-input');
-    input.addEventListener('input', () => {
-      const inputValue = input.value.trim();
+    const numberInput = document.querySelector('#numberInput');
+    numberInput.addEventListener('input', () => {
+      const inputValue = numberInput.value.trim();
       if (inputValue.length >= 1 ) {
         fetch('http://numbersapi.com/'+inputValue)
         .then((response) => {
           return response.text();
         })
         .then ((data) => {
-          document.getElementById('number-fact').innerHTML = data;
+          document.getElementById('numberFact').innerHTML = data;
         }) 
         .catch(() => {
-          document.getElementById('number-fact').innerHTML = 'failed to fetch data';
+          document.getElementById('numberFact').innerHTML = 'failed to fetch data';
         });
       } else {
-        document.getElementById('number-fact').innerHTML = '';
+        document.getElementById('numberFact').innerHTML = '';
       }
     })
   }
 
   dateFact() {
-    const dateInput = document.querySelector('#date-input');
+    const dateInput = document.querySelector('#dateInput');
     dateInput.addEventListener('input', () => {
       const dateInputValue = dateInput.value.trim();
       const dateValue = dateInputValue.split('-').join('/');
@@ -32,13 +32,13 @@ class FactBook {
             return response.text();
         })
         .then ((data) => {
-          document.getElementById('date-fact').innerHTML = data;
+          document.getElementById('dateFact').innerHTML = data;
         })
         .catch(() => {
-          document.getElementById('date-fact').innerHTML = 'failed to fetch data';
+          document.getElementById('dateFact').innerHTML = 'failed to fetch data';
         })
       } else {
-        document.getElementById('date-fact').innerHTML ='';
+        document.getElementById('dateFact').innerHTML ='';
       }
     })
   }

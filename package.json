@@ -1,0 +1,23 @@
+{
+  "name": "number-facts-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marveldev/a-number-fact-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marveldev/a-number-fact-app/issues"
+  },
+  "homepage": "https://github.com/marveldev/a-number-fact-app#readme",
+  "dependencies": {
+    "jest": "^26.6.1",
+    "node-fetch": "^2.6.1"
+  }
+}

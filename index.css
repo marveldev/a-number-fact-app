@@ -1,24 +1,31 @@
 body {
-  background-color: #065757ec;
+  text-align: center;
+  background-color: #9bbfc3;
+}
+
+.content>h1 {
+  font-size: 2em;
 }
 
 .container {
-  background-color: #c6d6d6;
-  text-align: center;
+  background-color: #62868638;
   width: 50%;
   margin: auto;
-  padding: 0.5em 0.8em;
-  box-shadow: 0 4px 8px 0 #fffefe2f;
+  height: auto;
+  padding: 1em;
+  border-radius: 0.8em;
 }
 
-.number-input {
-  margin-bottom: 1em;
-  padding: 0.8em;
+#numberInput {
+  height: 3em;
+  width: 18em;
+  padding: 0 0.8em;
 }
 
-#date-input {
-  padding: 0.4em 1em;
-  margin-bottom: 1em;
+#dateInput {
+  height: 3em;
+  width: 18em;
+  padding: 0 0.8em;
 }
 
 .date-fact {
@@ -26,19 +33,22 @@ body {
 }
 
 .output {
-  margin-bottom: 1em;
+  margin-top: 1em;
+  font-size: 1.5em;
 }
 
 @media screen and (max-width: 425px) {	
   .container {
     width: 70%;
-    margin-top: 9em;
   }
 }
 
 @media screen and (max-width: 320px) {	
-  .container {
-    width: 70%;
-    margin-top: 7em;
+  #numberInput {
+    width: 12em;
+  }
+  
+  #dateInput {
+    width: 12em;
   }
 }

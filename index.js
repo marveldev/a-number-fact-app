@@ -1,21 +1,21 @@
-const input = document.querySelector('.number-input');
-const dateInput = document.querySelector('#date-input');
+const dateInput = document.querySelector('#dateInput');
+const numberInput = document.querySelector('#numberInput');
 
-input.addEventListener('input', () => {
-  const inputValue = input.value.trim();
+numberInput.addEventListener('input', () => {
+  const inputValue = numberInput.value.trim();
   if (inputValue.length >= 1 ) {
     fetch('http://numbersapi.com/'+inputValue)
     .then((response) => {
         return response.text();
     })
-    .then ((data) => {
-      document.getElementById('number-fact').innerHTML = data;
+    .then((data) => {
+      document.getElementById('numberFact').innerHTML = data;
     }) 
     .catch(() => {
-      document.getElementById('number-fact').innerHTML = 'failed to fetch data';
+      document.getElementById('numberFact').innerHTML = 'failed to fetch data';
     });
   } else {
-    document.getElementById('number-fact').innerHTML = '';
+    document.getElementById('numberFact').innerHTML = '';
   }
 })
 
@@ -28,13 +28,13 @@ dateInput.addEventListener('input', () => {
     .then((response) => {
         return response.text();
     })
-    .then ((data) => {
-      document.getElementById('date-fact').innerHTML = data;
+    .then((data) => {
+      document.getElementById('dateFact').innerHTML = data;
     })
     .catch(() => {
-      document.getElementById('date-fact').innerHTML = 'failed to fetch data';
+      document.getElementById('dateFact').innerHTML = 'failed to fetch data';
     })
   } else {
-    document.getElementById('date-fact').innerHTML ='';
+    document.getElementById('dateFact').innerHTML ='';
   }
 })
